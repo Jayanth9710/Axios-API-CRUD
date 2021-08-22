@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react/cjs/react.development";
 
-function Product() {
+function Product(props) {
   const [prodList, setProdList] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
@@ -22,7 +22,7 @@ function Product() {
     }
 };
 FetchData();
-  }, []);
+  }, [props]);
 
   let handleDelete = async(id) => {
     let confirm = window.confirm("Are you sure want to delete the product?")
