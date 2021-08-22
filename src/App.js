@@ -1,7 +1,7 @@
 import './App.css';
 import Sidebar from "./Sidebar";
 import TopHeader from "./Topbar";
-import Product from'./Products';
+import Product from './Products';
 import Dashboard from './Dashboard';
 import ProductCreate from './CreateProduct'
 import ProductEdit from './EditProduct';
