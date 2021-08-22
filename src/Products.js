@@ -7,7 +7,8 @@ function Product() {
   const [prodList, setProdList] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
-  useEffect(async () => {
+  useEffect( () => {
+      let FetchData = async() => {
     try {
       let products = await axios.get(
         "https://60efffc0f587af00179d3c19.mockapi.io/users"
@@ -19,6 +20,8 @@ function Product() {
       console.log(error);
       setLoading(false)
     }
+};
+FetchData();
   }, []);
 
   let handleDelete = async(id) => {

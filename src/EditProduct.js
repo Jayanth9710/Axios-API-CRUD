@@ -8,7 +8,8 @@ function ProductEdit(props) {
   const [Price, setPrice] = useState("");
   const [isLoading,setLoading] = useState(false)
 
-  useEffect(async() => {
+  useEffect(() => {
+      let fetchData = async () =>{
  try {
   let product = await  axios.get(`https://60efffc0f587af00179d3c19.mockapi.io/users/${props.match.params.id}`)
   setProductname(product.data.ProductName);
@@ -16,7 +17,10 @@ function ProductEdit(props) {
  } catch (error) {
    console.log(error)
  }
+};
+ fetchData();
   }, [props])
+  
 
   let handleSubmit = async (e) => {
     e.preventDefault()
@@ -33,6 +37,7 @@ function ProductEdit(props) {
     history.push("/product")
 
   }
+
   return (
     <div>
       <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -76,6 +81,8 @@ function ProductEdit(props) {
       </div>
     </div>
   );
+  
 }
+
 
 export default ProductEdit;
