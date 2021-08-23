@@ -4,42 +4,42 @@ import { Link } from "react-router-dom";
 function Sidebar() {
   return (
     <ul
-      class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+      className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
       id="accordionSidebar"
     >
       <a
-        class="sidebar-brand d-flex align-items-center justify-content-center"
+        className="sidebar-brand d-flex align-items-center justify-content-center"
         href="index.html"
       >
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
+        <div className="sidebar-brand-icon rotate-n-15">
+          <i className="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">
+        <div className="sidebar-brand-text mx-3">
           SB Admin <sup>2</sup>
         </div>
       </a>
 
-      <hr class="sidebar-divider my-0" />
+      <hr className="sidebar-divider my-0" />
 
-      <li class="nav-item active">
-        <Link class="nav-link" to="/">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+      <li className="nav-item active">
+        <Link className="nav-link" to="/">
+          <i className="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span>
         </Link>
       </li>
 
-      <hr class="sidebar-divider" />
+      <hr className="sidebar-divider" />
 
-      <div class="sidebar-heading">Interface</div>
+      <div className="sidebar-heading">Interface</div>
 
-      <li class="nav-item">
-        <Link class="nav-link " to="/product">
-          <i class="fas fa-fw fa-cog"></i>
+      <li className="nav-item">
+        <Link className="nav-link " to="/product">
+          <i className="fas fa-fw fa-cog"></i>
           <span>Products</span>
         </Link>
       </li>
 
-      <hr class="sidebar-divider" />
+      <hr className="sidebar-divider" />
     </ul>
   );
 }

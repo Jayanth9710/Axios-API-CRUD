@@ -13,10 +13,10 @@ function App() {
       <Router>
         <div id="wrapper">
           <Sidebar></Sidebar>
-          <div id="content-wrapper" class="d-flex flex-column">
+          <div id="content-wrapper" className="d-flex flex-column">
             <div id="content">
             <TopHeader></TopHeader>
-            <div class="container-fluid">
+            <div className="container-fluid">
             <Switch>
                 
             <Route path="/" component={Dashboard} exact={true} />

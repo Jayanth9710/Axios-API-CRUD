@@ -1,7 +1,7 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useState } from "react/cjs/react.development";
+
 
 function Product(props) {
   const [prodList, setProdList] = useState([]);
@@ -15,7 +15,7 @@ function Product(props) {
       );
       setProdList([...products.data]);
       setLoading(false)
-      console.log(products.data);
+      
     } catch (error) {
       console.log(error);
       setLoading(false)
@@ -40,8 +40,8 @@ FetchData();
   };
   return (
     <>
-      <h1 class="h3 mb-2 text-gray-800">Products</h1>
-      <p class="mb-4">
+      <h1 className="h3 mb-2 text-gray-800">Products</h1>
+      <p className="mb-4">
         DataTables is a third party plugin that is used to generate the demo
         table below. For more information about DataTables, please visit the{" "}
         <a target="_blank" href="https://datatables.net" rel="noreferrer">
@@ -52,24 +52,24 @@ FetchData();
 
       <Link
         to="/create-product"
-        class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+        className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
       >
         Create Product
       </Link>
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+      <div className="card shadow mb-4">
+        <div className="card-header py-3">
+          <h6 className="m-0 font-weight-bold text-primary">DataTables Example</h6>
         </div>
-        <div class="card-body">
-          <div class="table-responsive">
+        <div className="card-body">
+          <div className="table-responsive">
             {
             
             isLoading ? <h3>Loading Data da Wait!!</h3> : 
               <table
-                class="table table-bordered"
+                className="table table-bordered"
                 id="dataTable"
                 width="100%"
-                cellspacing="0"
+                cellSpacing="0"
               >
                 <thead>
                   <tr>
