@@ -79,18 +79,13 @@ FetchData();
                     <th>Action</th>
                   </tr>
                 </thead>
-                <tfoot>
-                  <tr>
-                    <th>Id</th>
-                    <th>Product Name</th>
-                    <th>Price</th>
-                    <th>Action</th>
-                  </tr>
-                </tfoot>
+                
+                  
+                
                 <tbody>
-                  {prodList.map((products) => {
+                  {prodList.map((products,index) => {
                     return (
-                      <tr>
+                      <tr key={index*5+20}>
                         <td>{products.id}</td>
                         <td>{products.ProductName}</td>
                         <td>{products.Price}</td>

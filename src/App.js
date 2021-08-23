@@ -12,10 +12,10 @@ function App() {
     <div>
       <Router>
         <div id="wrapper">
-          <Sidebar></Sidebar>
+          <Sidebar key="side53"></Sidebar>
           <div id="content-wrapper" className="d-flex flex-column">
             <div id="content">
-            <TopHeader></TopHeader>
+            <TopHeader key="top21"></TopHeader>
             <div className="container-fluid">
             <Switch>
                 
